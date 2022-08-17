@@ -1,0 +1,44 @@
+/*AGREGAREMOS COLRES AL FONDO Y A OTRAS COSAS*/
+body{
+    background-color: rgba(0, 0, 255, 0.617);
+    text-align: center;
+}
+#board{
+    width: 300px;
+    height: 300px;
+}
+.myRow{
+    widht: 300px;
+    height: 300px;
+}
+.grid{
+    width: 30px;
+    height:30px;
+    border: black 0.5px solid;
+    display: inline-block;
+}
+.position{
+    display: inline-block;
+}
+.horizontal{
+    width: 35px;
+    height: 15px;
+    border: black 0.5px solid;
+}
+.vertical{
+    width: 15px;
+    height: 35px;
+    border: black 0.5px solid;
+    margin-top: 5px;
+}
+/*se agregaran color a los ataques acertados y a los fallidos*/
+
+.selected{
+    background-color: purple;
+}
+.hit{
+    background-color: green;
+}
+.miss{
+    background-color: darkorange;
+}

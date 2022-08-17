@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+</head>
+<body>
+ <div style="text-align: center; margin-top: 20%;">
+    <h1>¿Quieres ser mi novia?</h1>
+    <button id="btn-aceptar" style="background-color:black; color:whitesmoke; border-radius: 10px; padding: 10px;">¡Si mi amor!</button>
+    <button id="btn-cancelar" style="background-color:red; color: whitesmoke;border-radius: 10px; padding: 10px;" >¡Hiu no gracias!</button> 
+    <img id="img" src="drake dios.gif">
+ </div>
+</body>
+
+<script>
+document.getElementById('img').style.display="none";
+
+var contador= 0;
+
+var btnAceptar = document.getElementById('btn-aceptar');
+var btnCancelar = document.getElementById('btn-cancelar');
+
+//Evento click del boton aceptar
+btnAceptar.addEventListener('click', function() {
+
+    //Redireccionamos a la pagina de confirmacion 
+    aceptar();
+});
+
+
+
+
+//eVENTO mover del boton cancelar al poner el mouse encima
+btnCancelar.addEventListener('mouseover', function(){
+    //Redireccionamos a la pagina de confirmacion
+    cancelar();
+});
+
+/*
+*Mandar alerta
+*/
+function aceptar(){
+    document.getElementById('img').style.display = "inline",
+    ocultarBotones();
+
+
+}
+
+
+/*
+    * Mover el botón cancelar a cualquier lugar de la página
+    */
+    function cancelar() {
+    // -- Resolucion de la pantalla 
+    let x = window.innerWidth - btnCancelar.offsetWidth;
+    let y = window.innerHeight - btnCancelar.offsetHeight;
+
+    // -- numero aleatorio entre 0 y la resolucion de la pantalla
+    let aleatorioX = Math.floor(Math.random() * x);
+    let aleatorioY = Math.floor(Math.random() * y);
+
+    btnCancelar.style.position ='absolute';
+    btnCancelar.style.top = aleatorioY + 'px';
+    btnCancelar.style.left = aleatorioX + 'px';
+
+    // -- llamar a funcion de alerta
+    mostrarAlerta();
+}
+
+
+function ocultarBotones()
+{
+    btnAceptar.style.display = "none";
+    btnCancelar.style.display = "none";
+}
+
+/*
+*Mandar alerta
+*/
+function mostrarAlerta() {
+    contador ++;
+    if(contador ==5) {
+        alert('Por que no creamos una nueva historia de romeo y julieta');
+        contador++;
+    }
+}
+function mostrarAlerta() {
+    contador++;
+    if(contador == 5) {
+        alert('Por que no creamos una nueva historia de romeo y julieta');
+        contador++;
+    }
+}
+</script>
+</html>
